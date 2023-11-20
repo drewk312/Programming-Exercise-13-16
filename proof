@@ -1,0 +1,180 @@
+Unit Test Complete
+
+Overloading the ++ operator
+Build Status
+Build Succeeded
+Test Output
+
+[==========] Running 2 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from PreIncrement
+[ RUN      ] PreIncrement.0
+[       OK ] PreIncrement.0 (0 ms)
+[----------] 1 test from PreIncrement (0 ms total)
+
+[----------] 1 test from PostIncrement
+[ RUN      ] PostIncrement.1
+[       OK ] PostIncrement.1 (0 ms)
+[----------] 1 test from PostIncrement (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 2 tests.
+
+Test Contents
+
+dateType date1(12, 31, 2000);
+dateType date2 (1, 1, 2001);
+dateType date3(1, 2, 2001);
+
+TEST(PreIncrement, 0) {
+    ++date1;
+    ASSERT_TRUE(date1 == date2);
+}
+
+TEST(PostIncrement, 1) {
+     date1++;
+    ASSERT_TRUE(date1 == date3);
+}
+
+Unit Test Complete
+
+Overloading the -- operator
+Build Status
+Build Succeeded
+Test Output
+
+[==========] Running 2 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from PreDecrement
+[ RUN      ] PreDecrement.0
+[       OK ] PreDecrement.0 (0 ms)
+[----------] 1 test from PreDecrement (0 ms total)
+
+[----------] 1 test from PostDecrement
+[ RUN      ] PostDecrement.1
+[       OK ] PostDecrement.1 (0 ms)
+[----------] 1 test from PostDecrement (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test cases ran. (1 ms total)
+[  PASSED  ] 2 tests.
+
+Test Contents
+
+dateType date1(12, 31, 2000);
+dateType date2 (1, 1, 2001);
+dateType date3(1, 2, 2001);
+
+TEST(PreDecrement, 0) {
+    --date3;
+    ASSERT_TRUE(date3 == date2);
+}
+
+TEST(PostDecrement, 1) {
+     date2--;
+    ASSERT_TRUE(date2 == date1);
+}
+
+Overloading the <= and < operators
+Build Status
+Build Succeeded
+Test Output
+
+[==========] Running 3 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 3 tests from LessThanOrEqual
+[ RUN      ] LessThanOrEqual.0
+[       OK ] LessThanOrEqual.0 (0 ms)
+[ RUN      ] LessThanOrEqual.1
+[       OK ] LessThanOrEqual.1 (0 ms)
+[ RUN      ] LessThanOrEqual.2
+[       OK ] LessThanOrEqual.2 (0 ms)
+[----------] 3 tests from LessThanOrEqual (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 3 tests.
+
+Test Contents
+
+dateType date1(12, 31, 2000);
+dateType date2 (1, 1, 2001);
+
+TEST(LessThanOrEqual, 0) {
+    ASSERT_TRUE(date1 <= date2);
+}
+
+TEST(LessThanOrEqual, 1) {
+    ASSERT_TRUE(date1 <= date1);
+}
+
+TEST(LessThanOrEqual, 2) {
+    ASSERT_TRUE(date1 < date2);
+}
+
+Unit TestComplete
+
+Overloading the >= and > operators
+Build Status
+Build Succeeded
+Test Output
+
+[==========] Running 3 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 3 tests from GreaterThanOrEqual
+[ RUN      ] GreaterThanOrEqual.0
+[       OK ] GreaterThanOrEqual.0 (0 ms)
+[ RUN      ] GreaterThanOrEqual.1
+[       OK ] GreaterThanOrEqual.1 (0 ms)
+[ RUN      ] GreaterThanOrEqual.2
+[       OK ] GreaterThanOrEqual.2 (0 ms)
+[----------] 3 tests from GreaterThanOrEqual (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 3 tests.
+
+Test Contents
+
+dateType date1(12, 31, 2000);
+dateType date2 (1, 1, 2001);
+
+TEST(GreaterThanOrEqual, 0) {
+    ASSERT_TRUE(date2 >= date1);
+}
+
+TEST(GreaterThanOrEqual, 1) {
+    ASSERT_TRUE(date1 >= date1);
+}
+
+TEST(GreaterThanOrEqual, 2) {
+    ASSERT_TRUE(date2 > date1);
+}
+
+Unit TestComplete
+
+Overloading the != operator
+Build Status
+Build Succeeded
+Test Output
+
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from NotEqual
+[ RUN      ] NotEqual.0
+[       OK ] NotEqual.0 (0 ms)
+[----------] 1 test from NotEqual (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (0 ms total)
+[  PASSED  ] 1 test.
+
+Test Contents
+
+dateType date1(12, 31, 2000);
+dateType date2 (1, 1, 2001);
+
+TEST(NotEqual, 0) {
+    ASSERT_TRUE(date1 != date2);
+}
